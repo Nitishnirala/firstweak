@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="css/style.css">
+ <style type="text/css">
+ div.login{
+ margin: 0px;
+ border: 5px solid red;
+ width: 350px;
+ height: 250px;
+ padding: 50px 50px 50px 50px;
+float: center;
+background-color: wheat;
+ }
+ 
+ </style>
+</head>
+<body>
+  <section class="container">
+    <div class="login">
+      <h1>Employee Login</h1>
+      <form method="get" action="/login">
+        <p><input type="text" name="email" value="" placeholder="enter  Email"></p>
+        <p><input type="password" name="mobile" value="" placeholder="mobile number"></p>
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Remember me on this computer
+          </label>
+        </p>
+        <p class="submit"><input type="submit" value="Login"></p>
+      </form>
+    </div>
+
+</body>
+</html>

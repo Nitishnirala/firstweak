@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Registration Form</title>
+
+<script type="text/javascript">   
+function validate_form ( )
+{
+ 
+if ( document.emp.emp_name.value == "" )
+{
+alert ( "Please fill in the 'Your Employee Name' box." );
+return false;
+}
+if ( document.emp.num.value == "" )
+{
+alert ( "Enter Employee Number" );
+return false;
+}
+alert("sucessfully Submitted");
+return true;
+ 
+ 
+}
+if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.emp.email_id.value))  
+  {  
+    alert("You have entered an invalid email address!")  
+    return (false)   
+  }  
+ 
+            
+ function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : event.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+{alert("Enter Number");             
+return false;
+}
+          return true;
+       }
+ 
+  
+</script>
+<style type="text/css">
+table {
+	border: 2px solid;
+	border-color: green;
+}
+
+th, td {
+	padding: 5px;
+}
+
+th {
+	text-align: left;
+}
+a{
+text-decoration: none;
+color: cyan;
+font: italic;
+font-size: 25px;
+}
+a:hover{
+color: red;
+font-family: fantasy;
+font-size: 40px;
+
+}
+</style>
+</head>
+<body>
+<form name="emp" action="/employee_register"
+	onsubmit="return validate_form();" method="get">
+	<table align="center" width=40% width="100%" cellspacing="2"
+		cellpadding="2">
+		<tr>
+			<td colspan="2" align="center"><b>Employee Registration
+					Form.</b></td>
+
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="41%">Employee Name<span
+				style="color: red">*</span></td>
+
+			<td width="57%"><input type="text" value="" name="emp_name"
+				size="24"></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="41%">Employee Number<span
+				style="color: red">*</span></td>
+			<td width="57%"><input type="text" value="" name="num"
+				onkeypress="return isNumberKey(event)" size="24"></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="41%">Address</td>
+
+			<td width="57%"><textarea rows="4" maxlen="200" name="S2"
+					cols="20"></textarea></td>
+		</tr>
+		<tr>
+
+			<td align="left" valign="top" width="41%">Contact Number</td>
+			<td width="57%"><input type="t" value=""
+				onkeypress="return isNumberKey(event)" name="txtFName1" size="24"
+				maxlength="10"></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="41%">Job Location</td>
+			<td width="57%"><select name="mydropdown">
+					<option value="Default">Default</option>
+					<option value="Chennai">Chennai</option>
+					<option value="Bangalore">Bangalore</option>
+					<option value="Chennai">Pune</option>
+					<option value="Bangalore">Mysore</option>
+					<option value="Chennai">Chandigarh</option>
+
+			</select></td>
+
+
+		</tr>
+
+		<tr>
+			<td align="left" valign="top" width="41%">Designation</td>
+			<td width="57%"><select name="mydropdown">
+					<option value="Default">Default</option>
+					<option value="Systems Engineer">Systems Engineer</option>
+					<option value="Senior Systems Engineer">Senior Systems
+						Engineer</option>
+					<option value="Technology Analyst">Technology Analyst</option>
+					<option value="Technology Lead">Technology Lead</option>
+					<option value="Project Manager">Project Manager</option>
+
+
+			</select></td>
+
+
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="41%">Email<span
+				style="color: red">*</span></td>
+			<td width="57%"><input type="text" value="" name="email_id"
+				size="24"></td>
+		</tr>
+
+		<tr>
+			<td colspan="2">
+				<p align="center">
+					<input type="submit" value="  Submit" name="B4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="reset" value="Reset All" name="B5">
+			</td>
+		</tr>
+		<tr><th><td><a href="login.html">Login Here</a></td></th></tr>
+</table>
+</form>
+</body>
+</html>
+
