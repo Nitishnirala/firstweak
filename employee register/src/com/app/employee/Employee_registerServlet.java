@@ -31,6 +31,6 @@ public class Employee_registerServlet extends HttpServlet {
 		ent.setProperty("empDegination", design);
 		ent.setProperty("empEmail", email);
 		ds.put(ent);
-		resp.reset();
+	
 	}
 }

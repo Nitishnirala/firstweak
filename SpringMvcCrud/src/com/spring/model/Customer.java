@@ -47,8 +47,6 @@ public class Customer {
 		this.zipCode = zipCode;
 	}
 
-	
-
 	public Key getKey() {
 		return key;
 	}

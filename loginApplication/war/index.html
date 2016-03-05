@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>redirect</title>
+<script type="text/javascript">
+function formValidation()  
+{  
+  
+var uname = document.registration.userName;  
+var uemail = document.registration.email;  
+var passid = document.registration.pwd;
+var cpadd = document.registration.conpwd;  
+var address=document.registration.address;
+if(allLetter(uname))  
+{
+if(ValidateEmail(uemail))  
+{ 
+if(passid_validation(passid,7,12))  
+{       
+}
+if(cpadd_check(passid,cpadd))  {
+}
+if(valid_Address(address)){	
+}
+}  
+}  
+return false;  
+} 
+//name validation code 
+function allLetter(uname)  
+{   
+var letters =  /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-,])*$/;  
+if(uname.value.match(letters))  
+{  
+return true;  
+}  
+else  
+{  
+alert('Username must have alphabet characters only');  
+uname.focus();  
+return false;  
+}  
+} 
+//email id validation code
+function ValidateEmail(uemail)  
+{  
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(uemail.value.match(mailformat))  
+{  
+return true;  
+}  
+else  
+{  
+alert("You have entered an invalid email address!");  
+uemail.focus();  
+return false;  
+}  
+}
+//password validation code
+
+function passid_validation(passid,mx,my)  
+{  
+var passid_len = passid.value.length;  
+if (passid_len == 0 ||passid_len >= my || passid_len < mx)  
+{  
+alert("Password should not be empty / length be between "+mx+" to "+my);  
+passid.focus();  
+return false;  
+}  
+return true;  
+} 
+//confirm password validation code
+function cpadd_check(passid,cpadd){
+	if(passid.value==cpadd.value){
+
+	return true;  
+	}
+	else{
+	alert('password not match please give same password');
+	cpadd.focus();  
+	return false;
+	}  
+	}
+function valid_Address(address){
+	
+	var letters = /^[0-9a-zA-Z]+$/;  
+	if(address.value.match(letters))  
+	{  
+	return true;  
+	}  
+	else  
+	{  
+	alert('User address must have alphanumeric characters only');  
+	  
+	return false;  
+	}  
+}
+</script>
+<style type="text/css">
+table {
+	border: 2px solid;
+	border-color: green;
+}
+
+th, td {
+	padding: 5px;
+}
+
+th {
+	text-align: left;
+}
+ a {
+  color: green;
+  text-decoration: none;
+}
+#register{
+border-color:red;
+background-color: green;
+font-family: cursive;
+font-size: 15px;
+
+}
+</style>
+</head>
+
+<body>
+
+	<div align="center">
+		<h1>Registration Form</h1>
+		<form action="/login" method="get" name='registration'>
+			<table>
+				<tr>
+					<th>User Name</th>
+					<td><input type="text" name="userName"  ></td> 
+				</tr>
+				<tr>
+					<th>User Email</th>
+					<td><input type="email" name="email" ></td>
+				</tr>
+				<tr>
+					<th>User Password</th>
+					<td><input type="password" name="pwd"  ></td>
+				</tr>
+				<tr>
+					<th>confirm Password</th>
+					<td><input type="password" name="conpwd" ></td>
+				</tr>
+				<tr>
+					<th>D.O.B</th>
+					<td><input type="date" name="bday" ></td>
+				</tr>
+				<tr>
+					<th>Address</th>
+					<td><textarea rows="5" cols="20" name="address" ></textarea></td>
+				</tr>
+				<tr>
+					<th><a href="user.html">Login Here</a></th>
+					<td><input type="submit" id="register" value="Register" onclick='return formValidation();'></td>
+				</tr>
+				
+			</table>
+		</form>
+	</div>
+</body>
+</html>

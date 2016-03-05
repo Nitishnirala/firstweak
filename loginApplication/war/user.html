@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login here</title>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$('.message a').click(function() {
+		$('form').animate({
+			height : "toggle",
+			opacity : "toggle"
+		}, "slow");
+	});
+</script>
+<script type="text/javascript">
+	function validation() {
+		var uemail = document.registraion.uemail;
+		var password = document.registraion.pwd;
+		if (user_name(uname)) {
+         if(user_password(pass)){
+        	 
+         }
+		}
+
+		return false;
+	}
+	function user_name(uemail){
+		
+		
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+		if(uemail.value.match(mailformat))  
+		{  
+		return true;  
+		}  
+		else  
+		{  
+		alert("please give valid email");  
+		uemail.focus();  
+		return false;  
+		}  
+	}
+</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="login-page">
+		<div class="form">
+			<form class="register-form">
+				<input type="text" placeholder="name" /> <input type="password"
+					placeholder="password" /> <input type="text"
+					placeholder="email address" />
+				<button>create</button>
+				<p class="message">
+					Already registered? <a href="#">Sign In</a>
+				</p>
+			</form>
+			<form class="login-form" action="Logincode.jsp" method="get"
+				name="registraion">
+				<input type="email" placeholder="user email" name="uemail" /> <input
+					type="password" placeholder="password" name="pwd" />
+				<button type="submit" onclick="return validation();">Login</button>
+				<p class="message">
+					Not registered? <a href="index.html">Create an account</a>
+				</p>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
