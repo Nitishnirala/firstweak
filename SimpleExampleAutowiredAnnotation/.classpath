@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/My Documents/Downloads/ehcache-spring-annotations-1.1.2.jar (1)/ehcache-spring-annotations-1.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/spring-aop-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/spring-beans-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/spring-context-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/spring-context-support-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/spring-core-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/spring-expression-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/spring-web-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/User/Desktop/Spring jars/spring-webmvc-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
