@@ -129,8 +129,6 @@ public class CustomerController {
 		return new ModelAndView("redirect:../list");
 
 	}
-
-	// get all customers
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listCustomer(ModelMap model) {
 
@@ -142,7 +140,6 @@ public class CustomerController {
 
 		try {
 			results = (List<Customer>) q.execute();
-
 			if (results.isEmpty()) {
 				model.addAttribute("customerList", null);
 			} else {
@@ -153,9 +150,7 @@ public class CustomerController {
 			q.closeAll();
 			pm.close();
 		}
-
 		return "list";
-
 	}
 
 }
