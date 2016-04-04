@@ -31,23 +31,20 @@ if(request.readyState==4){
 var username=request.responseText; 
 var password=request.responseText;
 document.getElementById('nitish').innerHTML=username;  
-document.getElementById('password').innerHTML=password; 
 }  
 }  
 
 </script>  
 </head>  
-<body>  
-    <marquee><h1>This is an example of ajax</h1></marquee>  
+<body align="center">  
+    <!-- <marquee><h1>This is an example of ajax</h1></marquee>   -->
 <form name="vinform">  
 UserEmail:<input type="text" name="user">  
 Password:<input type="password" name="pass">  
 <input type="button" value="Send" onClick="sendInfo()">  
 </form>  
-<div><a href="admin.jsp">Admin</a></div>
-<div align="center" style="background: yellow; border: 10px solid red;">
+<div align="center" style="background: yellow; border: 10px solid green; width: 300px;">
 <span id="nitish" style="font-family: cursive; font-size: 30px;"> </span>  
-<span id="password"style="font-family: cursive; font-size: 30px;"> </span>
-  </div> 
+</div>
 </body>  
 </html>  
