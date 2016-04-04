@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function formValidation() {
+		var uname = document.registration.Fname;
+		var lname = document.registration.Lname;
+		var mobileNo = document.registration.Mno;
+		var uemail = document.registration.Email;
+		var age = document.registration.Age;
+		var cpadd = document.registration.RegPassWrd;
+		var cpadd = document.registration.RegConPassWrd;
+
+		if (allLetter(uname)) {
+			if (alname(lname)) {
+				if (phonenumber(mobileNo)) {
+
+					if (ValidateEmail(uemail)) {
+						
+
+						if (passid_validation(passid, 7, 12)) {
+
+							if (cpadd_check(passid, cpadd)) {
+								//window.location.assign("lastPage.html");
+								
+							}
+						}
+					}
+				}
+			}
+		}
+		return false;
+	}
+	//name validation code 
+	function allLetter(uname) {
+		var letters = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+		if (uname.value.match(letters)) {
+			document.getElementById("username").innerHTML = "";
+			return true;
+		} else {
+			document.getElementById("username").innerHTML = "Username must have alphabet characters only";
+			//alert('Username must have alphabet characters only');  
+			uname.focus();
+			return false;
+		}
+	}
+	//last name validation using javascript
+	function alname(lname) {
+		var letters = /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
+		if (lname.value.match(letters)) {
+			return true;
+		} else {
+			alert('Username must have alphabet characters only');
+			lname.focus();
+			return false;
+		}
+	}
+	//email id validation code
+	function ValidateEmail(uemail) {
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if (uemail.value.match(mailformat)) {
+			return true;
+		} else {
+			alert("You have entered an invalid email address!");
+			uemail.focus();
+			return false;
+		}
+	}
+	//password validation code
+
+	function passid_validation(passid, mx, my) {
+		var passid_len = passid.value.length;
+		if (passid_len == 0 || passid_len >= my || passid_len < mx) {
+			alert("Password should not be empty / length be between " + mx
+					+ " to " + my);
+			passid.focus();
+			return false;
+		}
+		return true;
+	}
+	function cpadd_check(passid, cpadd) {
+		if (passid.value == cpadd.value) {
+
+			return true;
+		} else {
+			alert('password not match please give same password');
+			cpadd.focus();
+			return false;
+		}
+
+	}
+	//mobile number validation code
+	function phonenumber(mobileNo) {
+		var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		if (mobileNo.value.match(phoneno)) {
+			
+			return true;
+		} else {
+			alert("Not a valid Phone Number");
+			return false;
+		}
+	}
+</script>
+<link type="html/css" href="background.css" rel="stylesheet" />
+</head>
+<body class="login" onload="document.registration.Fname.focus();">
+	<form action="/regform" method="get" name="registration">
+
+		<table align="center" margin="center">
+			<caption>Employee_registration form</caption>
+
+			<tr>
+				<td>First_name</td>
+				<td><input type="text" name="Fname" />
+				<p id="username"></td>
+			</tr>
+
+			<tr>
+				<td>Last_name</td>
+				<td><input type="text" name="Lname" /></td>
+			</tr>
+
+			<tr>
+				<td>Mobile Number</td>
+				<td><input type="text" name="Mno" /></td>
+				<td><p id="mb_ch"></p></td>
+			</tr>
+
+			<tr>
+				<td>E-mail</td>
+				<td><input type="text" name="Email" /></td>
+				<td><p id="em_ch"></p></td>
+			</tr>
+
+			<tr>
+				<td>Age</td>
+				<td><input type="text" name="Age" /></td>
+				<td><p id="age_ch"></p></td>
+			</tr>
+
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="RegPassWrd" /></td>
+				<td><p id="ps_ch"></p></td>
+			</tr>
+			<tr>
+				<td>confirm password</td>
+				<td><input type="password" name="RegConPassWrd" /></td>
+				<td><p id="con_ch"></p></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Validate"
+					onclick="return formValidation();" /></td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>
