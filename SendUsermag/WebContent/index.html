@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>send email</title>
+</head>
+<body>
+<div align="center" style="background: maroon; border: 10px solid green;">
+<form action="mailcode.jsp" method="get">
+   <table>
+   <tr><th>To</th><td><input type="email" name="toemail"></td></tr>
+   <tr><th>Subject</th><td><input type="text" name="subjects">
+   </td>
+   </tr>
+   <tr>
+   <th>Write message</th>
+   <td colspan="1"><textarea rows="10" cols="20" name="content"></textarea></td>
+   </tr>
+   <tr>
+   <th colspan="2"><input type="submit" value="Send"></th>
+   </tr>
+   </table></form>
+   </div>
+   <div>
+   <form action="file.jsp">
+   <table>
+   <tr><th>To</th><td><input type="email" name="toemail"></td></tr>
+   <tr>
+    <input type="text" name="foo">
+    <input type="file" name="myFile">
+   </tr>
+    <tr>
+   <th colspan="2"><input type="submit" value="Send"></th>
+   </tr>
+   </table></form>
+  </div>
+   </body>
+  
+   </html>
+  
